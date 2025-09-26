@@ -18,9 +18,7 @@ const pool = new Pool({
 
 // Middleware para permitir requisições de diferentes origens (CORS)
 // Em um ambiente de produção, você deve restringir 'origin' ao domínio do seu jogo.
-app.use(cors({
-    origin: '*'  // **Revisar para produção**
-}));
+app.use(cors());
 
 // Middleware para parsear JSON no corpo das requisições
 app.use(express.json());
